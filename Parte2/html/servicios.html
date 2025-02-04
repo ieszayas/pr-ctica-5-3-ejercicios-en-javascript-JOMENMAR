@@ -13,24 +13,28 @@
 </head>
 
 <body>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-secondary " style="--bs-bg-opacity: 0.25">
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary" style="--bs-bg-opacity: 0.25">
         <div class="container">
             <a class="navbar-brand" href="#">CatVetCare</a>
+            <button id="themeToggle" class="btn me-2">
+                <i class="bi bi-sun" id="themeIcon"></i>
+            </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <button id="themeToggle" class="btn">
-                <i class="bi bi-sun" id="themeIcon"></i>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
+                        <a class="nav-link" href="servicios.html">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Galería</a>
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Formulario</a>
                     </li>
                 </ul>
             </div>
@@ -39,7 +43,8 @@
 
     <div class="container mt-5">
         <h2 class="text-center">Servicios de Veterinaria para Gatos</h2>
-        <p class="text-center">En nuestra clínica, ofrecemos una variedad de servicios para asegurar la salud y bienestar de tu gato.</p>
+        <p class="text-center">En nuestra clínica, ofrecemos una variedad de servicios para asegurar la salud y
+            bienestar de tu gato.</p>
 
         <div class="row">
             <!-- Medical Check-ups Card -->
@@ -48,8 +53,10 @@
                     <img src="https://loremflickr.com/320/240" class="card-img-top" alt="Chequeos Médicos">
                     <div class="card-body">
                         <h5 class="card-title">Chequeos Médicos</h5>
-                        <p class="card-text">Ofrecemos chequeos de salud completos para asegurar que tu gato esté en óptimas condiciones.</p>
-                        <button class="btn btn-primary" onclick="showDetails('Chequeos Médicos')">Más Información</button>
+                        <p class="card-text">Ofrecemos chequeos de salud completos para asegurar que tu gato esté en
+                            óptimas condiciones.</p>
+                        <button class="btn btn-primary" onclick="showDetails('Chequeos Médicos')">Más
+                            Información</button>
                     </div>
                 </div>
             </div>
@@ -60,8 +67,10 @@
                     <img src="https://loremflickr.com/321/240" class="card-img-top" alt="Estética Felina">
                     <div class="card-body">
                         <h5 class="card-title">Estética Felina</h5>
-                        <p class="card-text">Baños, cortes de uñas y cuidado del pelaje para que tu gato luzca increíble.</p>
-                        <button class="btn btn-primary" onclick="showDetails('Estética Felina')">Más Información</button>
+                        <p class="card-text">Baños, cortes de uñas y cuidado del pelaje para que tu gato luzca
+                            increíble.</p>
+                        <button class="btn btn-primary" onclick="showDetails('Estética Felina')">Más
+                            Información</button>
                     </div>
                 </div>
             </div>
@@ -84,7 +93,8 @@
                     <img src="https://loremflickr.com/323/240" class="card-img-top" alt="Vacunación">
                     <div class="card-body">
                         <h5 class="card-title">Vacunación</h5>
-                        <p class="card-text">Ofrecemos servicios de vacunación para proteger a tu gato de enfermedades comunes.</p>
+                        <p class="card-text">Ofrecemos servicios de vacunación para proteger a tu gato de enfermedades
+                            comunes.</p>
                         <button class="btn btn-primary" onclick="showDetails('Vacunación')">Más Información</button>
                     </div>
                 </div>
@@ -97,7 +107,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Desparasitación</h5>
                         <p class="card-text">Realizamos desparasitaciones para asegurar la salud de tu gato.</p>
-                        <button class="btn btn-primary" onclick="showDetails('Desparasitación')">Más Información</button>
+                        <button class="btn btn-primary" onclick="showDetails('Desparasitación')">Más
+                            Información</button>
                     </div>
                 </div>
             </div>
