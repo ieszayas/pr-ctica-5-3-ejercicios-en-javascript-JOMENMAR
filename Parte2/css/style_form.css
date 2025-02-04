@@ -1,0 +1,123 @@
+:root {
+    --bg-color: #ececea;
+    --text-color: #000000;
+    --navbar-brand-color: #6f42c1;
+    --table-header-bg: #6f42c1;
+    --table-header-color: #f8f9fa;
+    --table-cell-bg: #f9f9f9;
+    --icon-color: #6f42c1;
+    --footer-link-color: #6f42c1;
+    --toast-bg: #333;
+    --toast-text: #fff;
+}
+
+[data-bs-theme="dark"] {
+    --bg-color: #121212; /* Color de fondo oscuro */
+    --text-color: #ffffff; /* Color de texto claro */
+    --navbar-brand-color: #bb86fc; /* Color de la marca de la navbar en modo oscuro */
+    --table-header-bg: #1e1e1e; /* Color de fondo de la cabecera de la tabla en modo oscuro */
+    --table-header-color: #ffffff; /* Color de texto de la cabecera de la tabla en modo oscuro */
+    --table-cell-bg: #1e1e1e; /* Color de fondo de las celdas de la tabla en modo oscuro */
+    --icon-color: #bb86fc; /* Color de los íconos en modo oscuro */
+    --footer-link-color: #bb86fc; /* Color de los enlaces del footer en modo oscuro */
+    --toast-bg: #444; /* Color de fondo del toast en modo oscuro */
+    --toast-text: #ffffff; /* Color de texto del toast en modo oscuro */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--navbar-brand-color);
+}
+
+.custom-table th {
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
+}
+
+.custom-table td {
+    background-color: var(--table-cell-bg);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--icon-color);
+}
+
+.carousel img {
+    object-fit: cover;
+    width: 200px;
+    height: 400px;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: var(--icon-color);
+}
+
+footer {
+    bottom: 0;
+}
+
+footer a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--footer-link-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.justificado {
+    text-align: justify;
+}
+
+/* Contenedor para centralizar todos los toasts */
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo base del toast */
+.toast {
+    background-color: var(--toast-bg);
+    color: var(--toast-text);
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Estado visible del toast */
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carousel {
+    max-width: 100%; /* Asegúrate de que el carrusel no exceda el ancho de su contenedor */
+    margin: auto; /* Centra el carrusel horizontalmente */
+}
+
+.carousel img {
+    object-fit: cover; /* Asegúrate de que las imágenes se ajusten correctamente */
+    height: 400px; /* Ajusta la altura según sea necesario */
+}

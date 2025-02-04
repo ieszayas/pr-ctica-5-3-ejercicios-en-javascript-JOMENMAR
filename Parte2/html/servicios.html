@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Veterinaria para Gatos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary" style="--bs-bg-opacity: 0.25">
+        <div class="container">
+            <a class="navbar-brand" href="#">CatVetCare</a>
+            <button id="themeToggle" class="btn me-2">
+                <i class="bi bi-sun" id="themeIcon"></i>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Formulario</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Servicios de Veterinaria para Gatos</h2>
+        <p class="text-center">En nuestra clínica, ofrecemos una variedad de servicios para asegurar la salud y
+            bienestar de tu gato.</p>
+
+        <div class="row">
+            <!-- Medical Check-ups Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://loremflickr.com/320/240" class="card-img-top" alt="Chequeos Médicos">
+                    <div class="card-body">
+                        <h5 class="card-title">Chequeos Médicos</h5>
+                        <p class="card-text">Ofrecemos chequeos de salud completos para asegurar que tu gato esté en
+                            óptimas condiciones.</p>
+                        <button class="btn btn-primary" onclick="showDetails('Chequeos Médicos')">Más
+                            Información</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grooming Services Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://loremflickr.com/321/240" class="card-img-top" alt="Estética Felina">
+                    <div class="card-body">
+                        <h5 class="card-title">Estética Felina</h5>
+                        <p class="card-text">Baños, cortes de uñas y cuidado del pelaje para que tu gato luzca
+                            increíble.</p>
+                        <button class="btn btn-primary" onclick="showDetails('Estética Felina')">Más
+                            Información</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boarding Services Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://loremflickr.com/322/240" class="card-img-top" alt="Hospedaje">
+                    <div class="card-body">
+                        <h5 class="card-title">Hospedaje</h5>
+                        <p class="card-text">Servicio de hospedaje seguro y cómodo para tu gato mientras viajas.</p>
+                        <button class="btn btn-primary" onclick="showDetails('Hospedaje')">Más Información</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vaccination Services Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://loremflickr.com/323/240" class="card-img-top" alt="Vacunación">
+                    <div class="card-body">
+                        <h5 class="card-title">Vacunación</h5>
+                        <p class="card-text">Ofrecemos servicios de vacunación para proteger a tu gato de enfermedades
+                            comunes.</p>
+                        <button class="btn btn-primary" onclick="showDetails('Vacunación')">Más Información</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deworming Services Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://loremflickr.com/324/240" class="card-img-top" alt="Desparasitación">
+                    <div class="card-body">
+                        <h5 class="card-title">Desparasitación</h5>
+                        <p class="card-text">Realizamos desparasitaciones para asegurar la salud de tu gato.</p>
+                        <button class="btn btn-primary" onclick="showDetails('Desparasitación')">Más
+                            Información</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Care Services Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://loremflickr.com/325/240" class="card-img-top" alt="Emergencias">
+                    <div class="card-body">
+                        <h5 class="card-title">Emergencias</h5>
+                        <p class="card-text">Atención de emergencia para tu gato en situaciones críticas.</p>
+                        <button class="btn btn-primary" onclick="showDetails('Emergencias')">Más Información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Service Details -->
+        <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="serviceModalLabel">Detalles del Servicio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="serviceDetails">
+                        <!-- Service details will be populated here -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/servicios.js"></script>
+    <script src="../js/oscuro.js"></script>
+</body>
+<!-- Footer -->
+<footer class="bg-secondary text-white py-4" style="--bs-bg-opacity: 0.25">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Gatotérminos Legales</h5>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-file-earmark-pdf-fill"></i> <a
+                            href="https://gestionclinicasveterinarias.com/condicionesuso" class="text-white"> Gatoleer
+                            Términos</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Nuestras Gatoredes</h5>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-instagram"></i> <a href="https://www.instagram.com/gatosgram/?hl=es"
+                            class="text-white" target="_blank"> Instagato</a></li>
+                    <li><i class="bi bi-tiktok"></i> <a href="https://www.tiktok.com/@yourcat0222?lang=es"
+                            class="text-white" target="_blank"> TikTogato</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Trabaja con Gatos</h5>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-briefcase-fill"></i> <a href="https://gattos.net/" class="text-white">Referentes
+                            Felinos</a></li>
+                    <li><i class="bi bi-phone"></i> <a href="tel:913094135" class="text-white"> 913 094 135</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>

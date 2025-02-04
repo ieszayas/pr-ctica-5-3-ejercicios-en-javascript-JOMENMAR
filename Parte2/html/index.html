@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria de Gatos - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary" style="--bs-bg-opacity: 0.25">
+        <div class="container">
+            <a class="navbar-brand" href="#">CatVetCare</a>
+            <button id="themeToggle" class="btn me-2">
+                <i class="bi bi-sun" id="themeIcon"></i>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Formulario</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Registro de Gatos</h2>
+        <input type="text" id="searchField" class="form-control mb-3" placeholder="Buscar gato...">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Raza</th>
+                    <th>Edad</th>
+                    <th>Última Visita</th>
+                    <th>Favorito</th>
+                </tr>
+            </thead>
+            <tbody id="catTableBody">
+                <!-- Cat data will be populated here -->
+            </tbody>
+        </table>
+        <input type="color" id="colorSelector" class="form-control mb-3" placeholder="Selecciona un color">
+
+        <!-- Cat Facts Section -->
+        <h3 class="text-center">Dato Curioso sobre Gatos</h3>
+        <p id="catFact" class="text-center"></p>
+
+        <!-- Cat Image Carousel Section -->
+        <h3 class="text-center">Galería de Gatos</h3>
+        <div id="catCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="catCarouselInner">
+                <!-- Cat images will be populated here -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#catCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#catCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+
+        <!-- Weather Section -->
+        <h3 class="text-center">Información del Clima</h3>
+        <input type="text" id="cityInput" class="form-control mb-3" placeholder="Ingresa una ciudad" />
+        <button id="fetchWeather" class="btn btn-info">Obtener Clima</button>
+        <p id="weatherInfo" class="text-center"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/oscuro.js"></script>
+</body>
+<!-- Footer -->
+<footer class="bg-secondary text-white py-4" style="--bs-bg-opacity: 0.25">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Gatotérminos Legales</h5>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-file-earmark-pdf-fill"></i> <a
+                            href="https://gestionclinicasveterinarias.com/condicionesuso" class="text-white"> Gatoleer
+                            Términos</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Nuestras Gatoredes</h5>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-instagram"></i> <a href="https://www.instagram.com/gatosgram/?hl=es"
+                            class="text-white" target="_blank"> Instagato</a></li>
+                    <li><i class="bi bi-tiktok"></i> <a href="https://www.tiktok.com/@yourcat0222?lang=es"
+                            class="text-white" target="_blank"> TikTogato</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Trabaja con Gatos</h5>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-briefcase-fill"></i> <a href="https://gattos.net/" class="text-white">Referentes
+                            Felinos</a></li>
+                    <li><i class="bi bi-phone"></i> <a href="tel:913094135" class="text-white"> 913 094 135</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
